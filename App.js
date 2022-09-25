@@ -7,7 +7,7 @@ import List from "./pages/List";
 const DATA = [
   {
     id: "1",
-    title: "GONORE",
+    title: "Gonore",
     subJudul: {
       judul1: "Definisi\n",
       judul2: "Etiologi dan Karakteristik \n",
@@ -77,10 +77,60 @@ const DATA = [
       },
     },
   },
-  { id: "2", title: "apa", materi: "apa aja boleh kok" },
-  { id: "3", title: "aja", materi: "tes1" },
-  { id: "4", title: "boleh", materi: "tes2" },
-  { id: "5", title: "nggak", materi: "tes3" },
+  {
+    id: "2",
+    title: "Sifilis",
+    subJudul: {
+      judul1: "Definisi \n",
+      judul2: "Etiologi \n",
+      judul3: "Gejala Klinis \n",
+      judul4: "Pembantu Diagnosis \n",
+      judul5: "Pengobatan \n",
+      judul6: "Pengawasan \n",
+      judul7: "The Complete Treatment of STI \n",
+      judul8: "Pencitraan \n",
+    },
+    isiMateri: {
+      materi1:
+        "Penyakit infeksi yang disebabkan Treponema pallidum, bersifat sangat kronik, sistemik, dan menyerang hamper semua alat tubuh sehingga dapat menyerupai banyak penyakit, memiliki masalaten dan dapat ditularkan dari ibu ke janin. ",
+      materi2:
+        "Treponema pallidum mmeiliki bentuk spiral yang terdiri dari 9-24 lekukan, dan bergerak seperti skrup. Berkembangbiak dengan pembelahan melintang. Bakteri ini tidak tahan terhadap lingkungan panas, kering, dan antiseptic. Serta dalam tubuh dapat hidup sampai 72 jam.",
+    },
+    itemList: {
+      stadiumI: {
+        item1: "Stadium I",
+        item2: "Msa inkubasi : 9-90 hari → rata-rata 3 minggu",
+        item3: "Lesi I → chare, di anogenital, dan soliter",
+        item4:
+          "Mula-mula akan timbul papel, lalu menjadi erosi, lalu menjadi ulkus, dangkal dan bersih, dan dinding tak bergaung",
+        item5: "Lokasinya berada koronarius ",
+        item6:
+          "Lesi primer dapat sembuh sendiri, dan bersifat laten. Lesinya mungkin sembuh tapi sifilisnya tidak",
+      },
+      item7: "STADIUM II",
+      item8: "Timbul ruam : 6-8 minggu (3minggu setelah stadium I)",
+      item9: "Pada fase ini sangat menular ",
+      item10: "Gejala klinisnya sangat bervarias dan bermacam-macam",
+      item11:
+        "Gejala konstitusi : anoreksia, malaise, sakit kepala, BB turun, demam",
+      item12: "Kelenjar getah bening superficial membesar",
+      item13: "Rambut menjadi rontok",
+      item14: "Kuku menjadi rapuh",
+      item15: "Sifilis Laten",
+      item16:
+        "Disebut juga sifilis tersembunyi, tidak memiliki gejala klinis tapi tes serologinya (+)",
+      item17: "Sangat destruktif",
+      item18: "Sifilis Lanjut",
+      item19: "Sangat destruktif",
+      item20: "Menyerang semua jaringan ",
+      item21: "Treponema pallidum sukar ditemukan pada fase ini",
+      item22: "Pada fase ini tidak infeksius",
+      item23: "Terdapat guma pada seluruh tubuh dan organ dalam ",
+    },
+  },
+  { id: "3", title: "aja" },
+  { id: "4", title: "boleh" },
+  { id: "5", title: "nggak" },
 ];
 
 const styles = StyleSheet.create({
@@ -149,6 +199,11 @@ const styles = StyleSheet.create({
   image: {
     width: 350,
   },
+  title: {
+    textAlign: "center",
+    fontSize: 30,
+    marginBottom: 10,
+  },
 });
 
 function DetailsScreen({ route }) {
@@ -158,6 +213,7 @@ function DetailsScreen({ route }) {
     return (
       <View style={styles.container}>
         <ScrollView>
+          <Text style={styles.title}>{DATA[0].title}</Text>
           <View style={styles.contentWrapper}>
             <Text style={styles.subJudul}>{DATA[0].subJudul.judul1}</Text>
             <Text style={styles.materi}>{DATA[0].isiMateri.materi1}</Text>
@@ -475,7 +531,27 @@ function DetailsScreen({ route }) {
   } else if (itemId === DATA[1].id) {
     return (
       <View>
-        <Text>tes 2</Text>
+        <ScrollView>
+          <Text style={styles.title}>{DATA[1].title}</Text>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[1].subJudul.judul1}</Text>
+            <Text style={styles.materi}>{DATA[1].isiMateri.materi1}</Text>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[1].subJudul.judul2}</Text>
+            <Text style={styles.materi}>{DATA[1].isiMateri.materi2}</Text>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[1].subJudul.judul3}</Text>
+            <Text>{DATA[1].itemList.item1}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumI.item1}
+              </Text>
+            </View>
+          </View>
+        </ScrollView>
       </View>
     );
   }
