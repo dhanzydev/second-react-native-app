@@ -1,12 +1,5 @@
 import * as React from "react";
-import {
-  Text,
-  View,
-  Button,
-  StyleSheet,
-  FlatList,
-  ScrollView,
-} from "react-native";
+import { Text, View, StyleSheet, ScrollView, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import List from "./pages/List";
@@ -20,10 +13,10 @@ const DATA = [
       judul2: "Etiologi dan Karakteristik \n",
       judul3: "Penularan \n",
       judul4: "Gejala Klinis \n",
-      judul5: "DIAGNOSIS \n",
-      judul6: "PENGOBATAN GONORE \n",
-      judul7: "PENGOBATAN ALTERNATIF \n",
-      judul8: "PENCITRAAN \n",
+      judul5: "Diagnosis \n",
+      judul6: "Pengobatan Gonore \n",
+      judul7: "Pengobatan Alternatif \n",
+      judul8: "Pencitraan \n",
     },
 
     isiMateri: {
@@ -66,6 +59,21 @@ const DATA = [
         item19: "nyeri ringan dan perdarahan",
         item20: "Gejala objective : ",
         item21: "kadang mild secretion",
+      },
+      pengobatanGonore: {
+        item1: "Ceftriaxone 250 mg, im single dose",
+        item2: "Ciprofloxacin 500 mg, single oral dose",
+        item3: "Oflosacin 400 mg, single oral dose ",
+        item4: "Thiamphenicol 3.5 g, single oral dose ",
+        item5: "Spectinomycine 2 g, im single dose",
+        item6: "Kanamycin 2 g, single oral dose",
+        item7: "Golongan cefixime",
+      },
+      pengobatanAlternatif: {
+        item1: "Penisilin procain dalam aqua 3 juta iu im + ",
+        item2: "Ampicillin 3.5 g single dose + 1 g probenecid ",
+        item3: "Amoxycillin 3 g, single dose + 1 g probenecid ",
+        item4: "Amoxicillin + clavulanic acid 3 g, single dose",
       },
     },
   },
@@ -137,6 +145,9 @@ const styles = StyleSheet.create({
     paddingTop: 0,
     paddingBottom: 0,
     alignItems: "center",
+  },
+  image: {
+    width: 350,
   },
 });
 
@@ -370,6 +381,93 @@ function DetailsScreen({ route }) {
             <Text style={styles.subJudul}>{DATA[0].subJudul.judul5}</Text>
             <Text style={styles.materi}>{DATA[0].isiMateri.materi3}</Text>
             <Text style={styles.materi}>{DATA[0].isiMateri.materi4}</Text>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[0].subJudul.judul6}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[0].itemList.pengobatanGonore.item1}
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[0].itemList.pengobatanGonore.item2}
+              </Text>
+              <Text style={styles.triangle}></Text>
+              <Text style={styles.itemList}>skg banyak</Text>
+              <Text style={styles.itemList}>yg resisten</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[0].itemList.pengobatanGonore.item3}
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[0].itemList.pengobatanGonore.item4}
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[0].itemList.pengobatanGonore.item5}
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[0].itemList.pengobatanGonore.item6}
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[0].itemList.pengobatanGonore.item7}
+              </Text>
+              <View style={styles.triangle}></View>
+              <Text style={styles.itemList}>single dose 400mg</Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[0].subJudul.judul7}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[0].itemList.pengobatanAlternatif.item1}
+              </Text>
+              <Text style={styles.itemList}>
+                1 g probenecid (gol penicillin skg udh resisten)
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[0].itemList.pengobatanAlternatif.item2}
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[0].itemList.pengobatanAlternatif.item3}
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[0].itemList.pengobatanAlternatif.item4}
+              </Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[0].subJudul.judul8}</Text>
+            <Image
+              style={styles.image}
+              source={require("./assets/images/gambar-genore-1.jpg")}
+            />
           </View>
         </ScrollView>
       </View>
