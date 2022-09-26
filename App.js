@@ -234,7 +234,29 @@ const DATA = [
       },
     },
   },
-  { id: "4", title: "boleh" },
+  {
+    id: "4",
+    title: "Trichomoniasis",
+    subJudul: {
+      judul1: "Definisi \n",
+      judul2: "Gejala Klinis \n",
+      judul3: "Diagnosis \n",
+      judul4: "Pengobatan \n",
+      judul5: "Pencitraan \n",
+    },
+    materi: {
+      materi1:
+        "Penyakit yang disebabkan infeksi protozoa Trichomonas vaginalis. Penularannya melalui hubungan seksual, menyerang traktus urogenital dengan masa inkubasi 3-28 hari.",
+      materi2:
+        "Diagnosis dapat tegak bila terdapat T. vaginalis pada pemeriksaan sediaan langsung dan kultur bakteri",
+    },
+    listItem: {
+      item1: "Terkdang asimptomatis 50-75% penderita tidak",
+      item2: "30% penderita mengeluarkan duh tubuh klasik",
+      item3: "Metronidazol 2 gram per oral, dosis tunggal atau",
+      item4: "Pengobatan tidak hanya kepada pasien tetapi pada",
+    },
+  },
   { id: "5", title: "nggak" },
 ];
 
@@ -1272,6 +1294,57 @@ function DetailsScreen({ route }) {
             <Image
               style={{ width: 350, height: 350 }}
               source={require("./assets/images/5.jpg")}
+            />
+          </View>
+        </ScrollView>
+      </View>
+    );
+  } else if (itemId === DATA[3].id) {
+    return (
+      <View>
+        <ScrollView>
+          <Text style={styles.title}>{DATA[3].title}</Text>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[3].subJudul.judul1}</Text>
+            <Text style={styles.materi}>{DATA[3].materi.materi1}</Text>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[3].subJudul.judul2}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[3].listItem.item1}</Text>
+              <Text style={styles.itemList}>mengeluarkan duh tubuh</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[3].listItem.item2}</Text>
+              <Text style={styles.itemList}>
+                (warna kehijauan, berbusa, gatal, dyspareunia
+              </Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[3].subJudul.judul3}</Text>
+            <Text style={styles.materi}>{DATA[3].materi.materi2}</Text>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[3].subJudul.judul4}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[3].listItem.item3}</Text>
+              <Text style={styles.itemList}>2 x 500 mgr per oral (7 hari)</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[3].listItem.item4}</Text>
+              <Text style={styles.itemList}>mitra seksualnya juga</Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[2].subJudul.judul5}</Text>
+            <Image
+              style={styles.image}
+              source={require("./assets/images/6.jpg")}
             />
           </View>
         </ScrollView>
