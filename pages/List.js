@@ -92,6 +92,8 @@ const styles = StyleSheet.create({
     marginTop: 30,
     padding: 2,
     paddingBottom: 70,
+    backgroundColor: "#FCE2DB",
+    height: Dimensions.get("window").height,
   },
   item: {
     marginTop: 5,
@@ -105,9 +107,11 @@ const styles = StyleSheet.create({
     shadowRadius: 1.41,
     elevation: 2,
     marginBottom: 10,
+    backgroundColor: "#F675A8",
   },
   textItem: {
     padding: 15,
+    color: "#fff",
   },
   centeredView: {
     flex: 1,
@@ -115,40 +119,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 22,
   },
-  modalView: {
-    height: Dimensions.get("window").height - 50,
-    width: Dimensions.get("window").width - 20,
-    backgroundColor: "white",
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    padding: 35,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-    flex: 1,
-    position: "relative",
-    marginBottom: 10,
-  },
-  buttonClose: {
-    backgroundColor: "#2196F3",
-  },
   textStyle: {
     color: "white",
     fontWeight: "bold",
-    textAlign: "center",
-  },
-  modalText: {
-    marginBottom: 15,
     textAlign: "center",
   },
 });

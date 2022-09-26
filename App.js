@@ -310,6 +310,7 @@ const styles = StyleSheet.create({
   container: {
     paddingLeft: 10,
     paddingRight: 10,
+    backgroundColor: "#FCE2DB",
   },
   contentWrapper: {
     marginTop: 10,
@@ -380,12 +381,17 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 350,
+    height: 200,
     marginBottom: 40,
   },
   title: {
     textAlign: "center",
     fontSize: 30,
-    marginBottom: 10,
+    marginBottom: 20,
+    backgroundColor: "#F675A8",
+    padding: 10,
+    color: "#fff",
+    borderRadius: 5,
   },
 });
 
@@ -713,7 +719,7 @@ function DetailsScreen({ route }) {
     );
   } else if (itemId === DATA[1].id) {
     return (
-      <View>
+      <View style={styles.container}>
         <ScrollView>
           <Text style={styles.title}>{DATA[1].title}</Text>
           <View style={styles.contentWrapper}>
@@ -1114,7 +1120,7 @@ function DetailsScreen({ route }) {
     );
   } else if (itemId === DATA[2].id) {
     return (
-      <View>
+      <View style={styles.container}>
         <ScrollView>
           <Text style={styles.title}>{DATA[2].title}</Text>
           <View style={styles.contentWrapper}>
@@ -1334,11 +1340,11 @@ function DetailsScreen({ route }) {
           <View style={styles.contentWrapper}>
             <Text style={styles.subJudul}>{DATA[2].subJudul.judul5}</Text>
             <Image
-              style={styles.image}
+              style={{ width: 250, height: 250, marginBottom: 20 }}
               source={require("./assets/images/4.jpg")}
             />
             <Image
-              style={{ width: 350, height: 350 }}
+              style={{ width: 250, height: 250 }}
               source={require("./assets/images/5.jpg")}
             />
           </View>
@@ -1347,7 +1353,7 @@ function DetailsScreen({ route }) {
     );
   } else if (itemId === DATA[3].id) {
     return (
-      <View>
+      <View style={styles.container}>
         <ScrollView>
           <Text style={styles.title}>{DATA[3].title}</Text>
           <View style={styles.contentWrapper}>
@@ -1398,7 +1404,7 @@ function DetailsScreen({ route }) {
     );
   } else if (itemId === DATA[4].id) {
     return (
-      <View>
+      <View style={styles.container}>
         <ScrollView>
           <Text style={styles.title}>{DATA[4].title}</Text>
           <View style={styles.contentWrapper}>
@@ -1532,11 +1538,11 @@ function DetailsScreen({ route }) {
           <View style={styles.contentWrapper}>
             <Text style={styles.subJudul}>{DATA[4].subJudul.judul5}</Text>
             <Image
-              style={{ width: 350, height: 350, marginBottom: 20 }}
+              style={{ width: 250, height: 250, marginBottom: 20 }}
               source={require("./assets/images/7.jpg")}
             />
             <Image
-              style={{ width: 350, height: 350, marginBottom: 20 }}
+              style={{ width: 250, height: 250, marginBottom: 20 }}
               source={require("./assets/images/8.jpg")}
             />
           </View>
