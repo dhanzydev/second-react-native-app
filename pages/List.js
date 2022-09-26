@@ -19,7 +19,7 @@ const DATA = [
   { id: "2", title: "Sifilis" },
   { id: "3", title: "Herpes Genitalia" },
   { id: "4", title: "Trichomoniasis" },
-  { id: "5", title: "Uretritis Non Spesifik Uns" },
+  { id: "5", title: "Uretritis Non Spesifik UNS" },
 ];
 
 const Item = ({ title, id }) => {

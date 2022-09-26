@@ -257,7 +257,53 @@ const DATA = [
       item4: "Pengobatan tidak hanya kepada pasien tetapi pada",
     },
   },
-  { id: "5", title: "nggak" },
+  {
+    id: "5",
+    title: "Uretritis Non Spesifik UNS",
+    subJudul: {
+      judul1: "Definisi \n",
+      judul2: "Gejala Klinis \n",
+      judul3: "Diagnosa \n",
+      judul4: "Pengobatan \n",
+      judul5: "Pencitraan \n",
+    },
+    materi: {
+      materi1:
+        "Peradangan uretra yang disebabkan karena bakteri Chlamydia trachomatis, Ureaplasma urealiticum, Trichomonas vaginalis.",
+      materi2:
+        "Diagnosis ditegakan dengan gejala kllinis dan pemeriksaan laboratorium. Pemeriksaan laboratorium dapat dilakukan dengan ELISA, imunofluoresences, probe dan PCR ",
+    },
+    listItem: {
+      item1: "M.I : 1-3 minggu, tidak seberat gonore ",
+      item2: {
+        gejalanya: {
+          item1: "Gejalanya : ",
+          item2: "disuri ringan",
+          item3: "polakisuri",
+          item4: "perasaan tidak enak di uretra",
+          item5: "keluarnya duh tubuh seropurulent",
+          item6: "Kadang-kadang tidak terlihat keluarnya duh tubuh.",
+        },
+      },
+      item3: "Gonore pada perempuan tidak khas, dan bersifat",
+      item4: {
+        keluhan: {
+          item1: "Sebagian kecil dengan keluhan:",
+          item2: "keluarnya duh tubuh vagina",
+          item3: "disuri ringan",
+          item4: "polakisuri",
+          item5: "nyeri di daerah pelvis dan",
+          item6: "disparenia",
+        },
+      },
+      item5: "Pada pemeriksaan serviks dapat terlihat tanda",
+      item6: "Tetrasiklin : 4 x 500 mg/hr selama 1 minggu",
+      item7: "Eritromisin : 4 x 500 mg/hr selama 1 minggu",
+      item8: "Doksisiklin : 2 x 100 mg/hr selama 1 minggu ",
+      item9: "Azitromycin : 1 gram single dose",
+      item10: "Ofloksasin : 2 x 200 mg/hr selama 10 hari",
+    },
+  },
 ];
 
 const styles = StyleSheet.create({
@@ -1341,10 +1387,157 @@ function DetailsScreen({ route }) {
             </View>
           </View>
           <View style={styles.contentWrapper}>
-            <Text style={styles.subJudul}>{DATA[2].subJudul.judul5}</Text>
+            <Text style={styles.subJudul}>{DATA[3].subJudul.judul5}</Text>
             <Image
               style={styles.image}
               source={require("./assets/images/6.jpg")}
+            />
+          </View>
+        </ScrollView>
+      </View>
+    );
+  } else if (itemId === DATA[4].id) {
+    return (
+      <View>
+        <ScrollView>
+          <Text style={styles.title}>{DATA[4].title}</Text>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[4].subJudul.judul1}</Text>
+            <Text style={styles.materi}>{DATA[4].materi.materi1}</Text>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[4].subJudul.judul2}</Text>
+            <Text style={styles.materi}>Laki - Laki</Text>
+            <Text>{"\n"}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[4].listItem.item1}</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[4].listItem.item2.gejalanya.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[4].listItem.item2.gejalanya.item2}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[4].listItem.item2.gejalanya.item3}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[4].listItem.item2.gejalanya.item4}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[4].listItem.item2.gejalanya.item5}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[4].listItem.item2.gejalanya.item6}
+              </Text>
+            </View>
+            <Text>{"\n"}</Text>
+            <Text style={styles.materi}>Perempuan</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[4].listItem.item3}</Text>
+              <Text style={styles.itemList}>asimptomatis</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[4].listItem.item4.keluhan.item1}
+              </Text>
+              <Text style={styles.itemList}></Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[4].listItem.item4.keluhan.item2}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[4].listItem.item4.keluhan.item3}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[4].listItem.item4.keluhan.item4}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[4].listItem.item4.keluhan.item5}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[4].listItem.item4.keluhan.item6}
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[4].listItem.item5}</Text>
+              <Text style={styles.itemList}>
+                servisitis yang disertai adanya folikel folikel kecil yang mudah
+                berdarah
+              </Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[4].subJudul.judul3}</Text>
+            <Text style={styles.materi}>{DATA[4].materi.materi2}</Text>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[4].subJudul.judul4}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[4].listItem.item6}</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[4].listItem.item7}</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[4].listItem.item8}</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[4].listItem.item9}</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[4].listItem.item10}</Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[4].subJudul.judul5}</Text>
+            <Image
+              style={{ width: 350, height: 350, marginBottom: 20 }}
+              source={require("./assets/images/7.jpg")}
+            />
+            <Image
+              style={{ width: 350, height: 350, marginBottom: 20 }}
+              source={require("./assets/images/8.jpg")}
             />
           </View>
         </ScrollView>
