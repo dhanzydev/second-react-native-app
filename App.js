@@ -1,5 +1,13 @@
 import * as React from "react";
-import { Text, View, StyleSheet, ScrollView, Image } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  ScrollView,
+  Image,
+  Button,
+  Dimensions,
+} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import List from "./pages/List";
@@ -392,6 +400,35 @@ const styles = StyleSheet.create({
     padding: 10,
     color: "#fff",
     borderRadius: 5,
+  },
+  containerWelcomePage: {
+    paddingLeft: 70,
+    paddingRight: 70,
+    paddingTop: 150,
+    backgroundColor: "#FCE2DB",
+    height: Dimensions.get("window").height,
+  },
+  Mallted: {
+    textAlign: "center",
+    fontSize: 30,
+    marginBottom: 40,
+  },
+  male: {
+    textAlign: "center",
+    marginBottom: 80,
+  },
+  nama: {
+    fontSize: 24,
+    textAlign: "center",
+    marginBottom: 20,
+  },
+  nim: {
+    fontSize: 24,
+    textAlign: "center",
+    marginBottom: 20,
+  },
+  btnStart: {
+    width: 30,
   },
 });
 
@@ -1552,13 +1589,48 @@ function DetailsScreen({ route }) {
   }
 }
 
+const Welcome = ({ navigation }) => {
+  return (
+    <View style={styles.containerWelcomePage}>
+      <Text style={styles.Mallted}>Mallted</Text>
+      <Text style={styles.male}>Male Sexually Transmited Disease</Text>
+      <Text style={styles.nama}>Putu Urvasi Ari Utami</Text>
+      <Text style={styles.nim}>1958011025</Text>
+      <Button
+        style={styles.btnStart}
+        title="Mulai"
+        onPress={() => navigation.navigate("List")}
+      />
+    </View>
+  );
+};
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="List" component={List} />
+        <Stack.Screen
+          name="Welcome"
+          options={{
+            title: "Mallted by Putu Urvasi",
+            headerTitleStyle: {
+              fontSize: 12,
+            },
+          }}
+          component={Welcome}
+        />
+        <Stack.Screen
+          name="List"
+          component={List}
+          options={{
+            title: "Mallted by Putu Urvasi",
+            headerTitleStyle: {
+              fontSize: 12,
+            },
+          }}
+        />
         <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>

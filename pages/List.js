@@ -81,6 +81,7 @@ export default class List extends React.Component {
           data={this.state.data}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
+          style={{ marginTop: 20 }}
         />
       </View>
     );
@@ -89,7 +90,7 @@ export default class List extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 30,
+    paddingTop: 30,
     padding: 2,
     paddingBottom: 70,
     backgroundColor: "#FCE2DB",
