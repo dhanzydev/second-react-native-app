@@ -99,33 +99,74 @@ const DATA = [
     itemList: {
       stadiumI: {
         item1: "Stadium I",
-        item2: "Msa inkubasi : 9-90 hari → rata-rata 3 minggu",
-        item3: "Lesi I → chare, di anogenital, dan soliter",
-        item4:
-          "Mula-mula akan timbul papel, lalu menjadi erosi, lalu menjadi ulkus, dangkal dan bersih, dan dinding tak bergaung",
+        item2: "Msa inkubasi : 9-90 hari",
+        item3: "Lesi I",
+        item4: "Mula-mula akan timbul papel, lalu menjadi erosi,",
         item5: "Lokasinya berada koronarius ",
-        item6:
-          "Lesi primer dapat sembuh sendiri, dan bersifat laten. Lesinya mungkin sembuh tapi sifilisnya tidak",
+        item6: "Lesi primer dapat sembuh sendiri, dan bersifat",
       },
-      item7: "STADIUM II",
-      item8: "Timbul ruam : 6-8 minggu (3minggu setelah stadium I)",
-      item9: "Pada fase ini sangat menular ",
-      item10: "Gejala klinisnya sangat bervarias dan bermacam-macam",
-      item11:
-        "Gejala konstitusi : anoreksia, malaise, sakit kepala, BB turun, demam",
-      item12: "Kelenjar getah bening superficial membesar",
-      item13: "Rambut menjadi rontok",
-      item14: "Kuku menjadi rapuh",
-      item15: "Sifilis Laten",
-      item16:
-        "Disebut juga sifilis tersembunyi, tidak memiliki gejala klinis tapi tes serologinya (+)",
-      item17: "Sangat destruktif",
-      item18: "Sifilis Lanjut",
-      item19: "Sangat destruktif",
-      item20: "Menyerang semua jaringan ",
-      item21: "Treponema pallidum sukar ditemukan pada fase ini",
-      item22: "Pada fase ini tidak infeksius",
-      item23: "Terdapat guma pada seluruh tubuh dan organ dalam ",
+      stadiumII: {
+        item1: "STADIUM II",
+        item2: "Timbul ruam : 6-8 minggu (3 minggu setelah",
+        item3: "Pada fase ini sangat menular ",
+        item4: "Gejala klinisnya sangat bervarias dan",
+        item5: "Gejala konstitusi : anoreksia, malaise, sakit kepala, ",
+        item6: "Kelenjar getah bening superficial membesar",
+        item7: "Rambut menjadi rontok",
+        item8: "Kuku menjadi rapuh",
+      },
+      sifilisLaten: {
+        item1: "Sifilis Laten",
+        item2: "Disebut juga sifilis tersembunyi, tidak memiliki",
+      },
+      sifilisLanjut: {
+        item1: "Sifilis Lanjut",
+        item2: "Sangat destruktif",
+        item3: "Menyerang semua jaringan ",
+        item4: "Treponema pallidum sukar ditemukan pada fase ini",
+        item5: "Pada fase ini tidak infeksius",
+        item6: "Terdapat guma pada seluruh tubuh dan organ",
+      },
+      pemeriksaan: {
+        item1: "Pemeriksaan treponema pallidum",
+        item2: "Mikroskop lapangan gelap : melihat bentuk dan",
+        item3: "Tes Serologi Sifilis (TSS)",
+        item4: "Pemeriksaan pembantu yang penting, sebagai",
+      },
+      siDanSii: {
+        item1: "SI dan SII",
+        item2: "Penicillin G benzathin : 2,4 juta i.u/mg dosis total",
+        item3: "Penicillin prokain aqua : 600 ribu i.u/hr dosis total",
+        item4: "Penicillin prokain minyak dg Al stearat (PAM) : ",
+        item5: "Bila alergi pensisilin : ",
+        item6: "Eritromisin 4x500 mgejalahari selama 15 hari ",
+        item7: "Tetrasiklin HCl 4x500 mgejalahari selama 15",
+      },
+      sifilisLatenLanjut: {
+        item1: "Sifilis Laten Lanjut",
+        item2: "Penicillin G benzathin : 2,4 juta i.u/mg dosis",
+        item3: "Penicillin prokain aqua : 600 ribu i.u/hr dosis",
+        item4: "Penicillin prokain minyak dg Al stearat (PAM) :",
+      },
+      item1: "Penting untuk mendapatkan hasil pengobatan yang",
+      siDanSiiPengawasan: {
+        item1: "SI dan SII",
+        item2: "Setiap bulan sampai 3 bulan dalam setahun",
+        item3: "Setiap 3 bulan sampai setahun",
+        item4: "Kemudian bulan ke 18 dan 24",
+      },
+      sifilisLatenPengawasan: {
+        item1: "Sifilis Laten",
+        item2: "Setiap bulan selama 3 bulan",
+        item3: "Setiap 3 bulan salaam 9 bulan ",
+        item4: "Setiap 6 bulan selama 1 tahun",
+        item5: "Seterusnya sekali setahun",
+      },
+      item2: "Education",
+      item3: "Counselling",
+      item4: "Effective treatment",
+      item5: "Contact tracing",
+      item6: "Treatment of sexual partner",
     },
   },
   { id: "3", title: "aja" },
@@ -140,7 +181,7 @@ const styles = StyleSheet.create({
   },
   contentWrapper: {
     marginTop: 10,
-    backgroundColor: "#0096FF",
+    backgroundColor: "#F675A8",
     padding: 10,
     borderRadius: 5,
   },
@@ -196,8 +237,18 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
     alignItems: "center",
   },
+  subSubList: {
+    marginLeft: 55,
+    flex: 1,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    paddingTop: 0,
+    paddingBottom: 0,
+    alignItems: "center",
+  },
   image: {
     width: 350,
+    marginBottom: 40,
   },
   title: {
     textAlign: "center",
@@ -550,6 +601,381 @@ function DetailsScreen({ route }) {
                 {DATA[1].itemList.stadiumI.item1}
               </Text>
             </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumI.item2}
+              </Text>
+              <View style={styles.triangle}></View>
+              <Text style={styles.itemList}>rata-rata 3 minggu</Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumI.item3}
+              </Text>
+              <View style={styles.triangle}></View>
+              <Text style={styles.itemList}>
+                chare, di anogenital, dan soliter
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumI.item4}
+              </Text>
+              <Text style={styles.itemList}>
+                lalu menjadi ulkus, dangkal dan bersih, dan dinding tak bergaung
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumI.item5}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumI.item6}
+              </Text>
+              <Text style={styles.itemList}>
+                laten. Lesinya mungkin sembuh tapi sifilisnya tidak
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text>{"\n"}</Text>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumII.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumII.item2}
+              </Text>
+              <Text style={styles.itemList}>stadium I)</Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumII.item3}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumII.item4}
+              </Text>
+              <Text style={styles.itemList}>bermacam-macam</Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumII.item5}
+              </Text>
+              <Text style={styles.itemList}>BB turun, demam</Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumII.item6}
+              </Text>
+              <Text style={styles.itemList}></Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumII.item7}
+              </Text>
+              <Text style={styles.itemList}></Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.stadiumII.item8}
+              </Text>
+              <Text style={styles.itemList}></Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text>{"\n"}</Text>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLaten.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLaten.item2}
+              </Text>
+              <Text style={styles.itemList}>
+                gejala klinis tapi tes serologinya (+)
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text>{"\n"}</Text>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLanjut.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLanjut.item2}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLanjut.item3}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLanjut.item4}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLanjut.item5}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLanjut.item6}
+              </Text>
+              <Text style={styles.itemList}>dalam</Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[1].subJudul.judul4}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.pemeriksaan.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.pemeriksaan.item2}
+              </Text>
+              <Text style={styles.itemList}>
+                pergerakan. Treponema akan terlihat putih pada latar belakang
+                gelap
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.pemeriksaan.item3}
+              </Text>
+            </View>
+            <View style={styles.subSubList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.pemeriksaan.item4}
+              </Text>
+              <Text style={styles.itemList}>
+                prognosis hasil pengobatan. TSS terdiri dari 2 macam yakni tes
+                non treponemal dan tes trponemal
+              </Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[1].subJudul.judul5}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.siDanSii.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.siDanSii.item2}
+              </Text>
+              <Text style={styles.itemList}>
+                4,8 juta i.u. interval 1 minggu
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.siDanSii.item3}
+              </Text>
+              <Text style={styles.itemList}>6 juta i.u. selama 10 hari</Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.siDanSii.item4}
+              </Text>
+              <Text style={styles.itemList}>
+                1,2 juta i.u./x 2x seminggu dosis total 4,8 juta i.u.
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.siDanSii.item5}
+              </Text>
+            </View>
+            <View style={styles.subSubList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.siDanSii.item6}
+              </Text>
+            </View>
+            <View style={styles.subSubList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.siDanSii.item7}
+              </Text>
+              <Text style={styles.itemList}>hari</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLatenLanjut.item1}
+              </Text>
+            </View>
+            <View style={styles.subSubList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLatenLanjut.item2}
+              </Text>
+              <Text style={styles.itemList}>total 7,2 juta i.u</Text>
+            </View>
+            <View style={styles.subSubList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLatenLanjut.item3}
+              </Text>
+              <Text style={styles.itemList}>
+                total 12 juta i.u. selama 20 hari
+              </Text>
+            </View>
+            <View style={styles.subSubList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLatenLanjut.item4}
+              </Text>
+              <Text style={styles.itemList}>1,2 juta i.u./x</Text>
+              <View style={styles.triangle}></View>
+              <Text style={styles.itemList}>
+                2x seminggu dosis total 7,2 juta i.u
+              </Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[1].subJudul.judul6}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[1].itemList.item1}</Text>
+              <Text style={styles.itemList}>sempurna</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.siDanSiiPengawasan.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.siDanSiiPengawasan.item2}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.siDanSiiPengawasan.item3}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.siDanSiiPengawasan.item4}
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLatenPengawasan.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLatenPengawasan.item2}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLatenPengawasan.item3}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLatenPengawasan.item4}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[1].itemList.sifilisLatenPengawasan.item5}
+              </Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[1].subJudul.judul7}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[1].itemList.item2}</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[1].itemList.item3}</Text>
+              <View style={styles.triangle}></View>
+              <Text style={styles.itemList}>
+                jangan sampe menularkan ke pasangan
+              </Text>
+              <Text style={styles.itemList}>
+                dan jangan sampai mengulangi penyakit yang sama
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[1].itemList.item4}</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[1].itemList.item5}</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[1].itemList.item6}</Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[1].subJudul.judul8}</Text>
+            <Image
+              style={styles.image}
+              source={require("./assets/images/2.jpg")}
+            />
+            <Image
+              style={styles.image}
+              source={require("./assets/images/3.jpg")}
+            />
           </View>
         </ScrollView>
       </View>
