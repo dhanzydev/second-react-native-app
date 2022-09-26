@@ -14,12 +14,12 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const DATA = [
   {
     id: "1",
-    title: "GONORE",
+    title: "Gonore",
   },
-  { id: "2", title: "SIFILIS" },
-  { id: "3", title: "HERPES GENITALIA" },
-  { id: "4", title: "TRICHOMONIASIS" },
-  { id: "5", title: "URETRITIS NON SPESIFIK UNS" },
+  { id: "2", title: "Sifilis" },
+  { id: "3", title: "Herpes Genitalia" },
+  { id: "4", title: "Trichomoniasis" },
+  { id: "5", title: "Uretritis Non Spesifik Uns" },
 ];
 
 const Item = ({ title, id }) => {

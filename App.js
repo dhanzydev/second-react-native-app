@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, ScrollView, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import List from "./pages/List";
+import { wrap } from "lodash";
 
 const DATA = [
   {
@@ -169,7 +170,70 @@ const DATA = [
       item6: "Treatment of sexual partner",
     },
   },
-  { id: "3", title: "aja" },
+  {
+    id: "3",
+    title: "Herpes Genitalia",
+    subJudul: {
+      judul1: "Definisi \n",
+      judul2: "Gambaran Klinis \n",
+      judul3: "Diagnosis \n",
+      judul4: "Pengobatan \n",
+      judul5: "Pencitraan \n",
+    },
+    isiMateri:
+      "Penyakit ini merupakan infeksi Herpes Simplex virus(HSV) pada genitalia dan sekitarnya.Bersifat rekurens dengan masa inkubasi 3-7 hari.Diantara HSV- 1 dan HSV - 2, HSV - 2 menjadi penyebab terbanyak terjadinya herpes genitalia.",
+    itemList: {
+      item1: "Virus herpes yang mikrolesi masuk melalui epitel",
+
+      item2: "Virus bergabung dengan DNA hospes hingga terjadi",
+      item3: "Virus melalui serabut saraf sensoris perifer secara",
+      infeksiPrimer: {
+        item1: "Infeksi Primer",
+        item2: "Terlihat vesikel berkelompok, dengan dasar",
+        item3: "Vesikel yang pecah akan sebabkan erosi dan ulkus",
+        item4: "Lesi akan sembuh tanpa sikatrik pada 15-21 hari ",
+      },
+      infeksiRekuren: {
+        item1: "Infeksi Rekuren",
+        item2: "Gejala klinis lebih ringan dan perjalanan penyakit",
+        item3: "Lesi akan sembuh dalam waktu 8-10 hari ",
+      },
+      item4: "Secara klinis terlihat khas dengan berupa vesikel",
+      pemeriksaanLabo: {
+        item1: "Bila memungkinkan ditunjang dengan pemeriksaan",
+        item2: "Tzanck smear",
+        item3: "Pemeriksaan ELISA ",
+        item4: "Kultur jaringan",
+        item5: "Polimerase Chain Reaction (PCR)",
+      },
+      profilaksis: {
+        item1: "Profilaksis",
+        item2: "Kondom",
+        item3: "Penerangan pada penderita kapan saat penularan ",
+        item4: "Menghilangkan faktor pencetus ",
+        item5: "Operasi Saesaria pada wanita hamil dengan lesi di",
+      },
+      pengobatanNonSpesifik: {
+        item1: "Pengobatan non spesifik",
+        item2: "Analgetika",
+        item3: "Antiseptik Yodium povidon",
+        item4: "Psikoterapi",
+      },
+      pengobatanSpesifik: {
+        item1: "Pengobatan spesifik ",
+        lesiPrimer: {
+          item1: "Lesi Primer",
+          item2: "Asiklovir 5 x 200 mgejalahr (10 hari)",
+          item3: "Valsiklovir 2 x 500 mgejalahr (5-10 hari)",
+        },
+        lesiRekuren: {
+          item1: "Lesi Rekuren",
+          item2: "Asiklovir 5 x 200 mgejalahr (5 hari) ",
+          item3: "Valsiklovir 2 x 500 mgejalahr (5 hari)",
+        },
+      },
+    },
+  },
   { id: "4", title: "boleh" },
   { id: "5", title: "nggak" },
 ];
@@ -975,6 +1039,239 @@ function DetailsScreen({ route }) {
             <Image
               style={styles.image}
               source={require("./assets/images/3.jpg")}
+            />
+          </View>
+        </ScrollView>
+      </View>
+    );
+  } else if (itemId === DATA[2].id) {
+    return (
+      <View>
+        <ScrollView>
+          <Text style={styles.title}>{DATA[2].title}</Text>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[2].subJudul.judul1}</Text>
+            <Text style={styles.materi}>{DATA[2].isiMateri}</Text>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[2].subJudul.judul2}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[2].itemList.item1}</Text>
+              <Text style={styles.itemList}>mukosa atau kulit hospes</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[2].itemList.item2}</Text>
+              <Text style={styles.itemList}>
+                replikasi, menyebabkan penyakit kulit, dan fokal nekrosis akibat
+                proses degenerasi ballooning pada sel
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[2].itemList.item3}</Text>
+              <Text style={styles.itemList}>
+                ascenden menuju ke ganglion saraf pada medulla spinalis
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.infeksiPrimer.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.infeksiPrimer.item2}
+              </Text>
+              <Text style={styles.itemList}>eritematosa dan terasa nyeri</Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.infeksiPrimer.item3}
+              </Text>
+              <Text style={styles.itemList}>dangkal</Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.infeksiPrimer.item4}
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.infeksiRekuren.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.infeksiRekuren.item2}
+              </Text>
+              <Text style={styles.itemList}>lebih singkat</Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.infeksiRekuren.item3}
+              </Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[2].subJudul.judul3}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>{DATA[2].itemList.item4}</Text>
+              <Text style={styles.itemList}>
+                berkelompok dengan darsar eritematosa dan bersifat rekuren
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pemeriksaanLabo.item1}
+              </Text>
+              <Text style={styles.itemList}>laboratorium:</Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pemeriksaanLabo.item2}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pemeriksaanLabo.item3}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pemeriksaanLabo.item4}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pemeriksaanLabo.item5}
+              </Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[2].subJudul.judul4}</Text>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.profilaksis.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.profilaksis.item2}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.profilaksis.item3}
+              </Text>
+              <Text style={styles.itemList}>penyakit dapat terjadi</Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.profilaksis.item4}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.profilaksis.item5}
+              </Text>
+              <Text style={styles.itemList}>genitalia</Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pengobatanNonSpesifik.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pengobatanNonSpesifik.item2}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pengobatanNonSpesifik.item3}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pengobatanNonSpesifik.item4}
+              </Text>
+            </View>
+            <View style={styles.wrapperList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pengobatanSpesifik.item1}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pengobatanSpesifik.lesiPrimer.item1}
+              </Text>
+            </View>
+            <View style={styles.subSubList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pengobatanSpesifik.lesiPrimer.item2}
+              </Text>
+            </View>
+            <View style={styles.subSubList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pengobatanSpesifik.lesiPrimer.item3}
+              </Text>
+            </View>
+            <View style={styles.subList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pengobatanSpesifik.lesiRekuren.item1}
+              </Text>
+            </View>
+            <View style={styles.subSubList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pengobatanSpesifik.lesiRekuren.item2}
+              </Text>
+            </View>
+            <View style={styles.subSubList}>
+              <View style={styles.orderList}></View>
+              <Text style={styles.itemList}>
+                {DATA[2].itemList.pengobatanSpesifik.lesiRekuren.item3}
+              </Text>
+            </View>
+          </View>
+          <View style={styles.contentWrapper}>
+            <Text style={styles.subJudul}>{DATA[2].subJudul.judul5}</Text>
+            <Image
+              style={styles.image}
+              source={require("./assets/images/4.jpg")}
+            />
+            <Image
+              style={{ width: 350, height: 350 }}
+              source={require("./assets/images/5.jpg")}
             />
           </View>
         </ScrollView>
