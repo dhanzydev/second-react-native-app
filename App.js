@@ -40,6 +40,24 @@ const DATA = [
       judul3: "Manifestasi Klinis",
     },
   },
+  {
+    id: "4",
+    subJudul: {
+      judul1: "Definisi",
+      judul2: "Etiologi",
+      judul3: "Jenis - Jenis Batu Ginjal",
+    },
+  },
+  {
+    id: "5",
+    subJudul: {
+      judul1: "Definisi",
+      judul2: "Pielonefritis Akut",
+      judul3: "Pielonefritis Kronis",
+      judul4: "Etiologi Pielonefritis",
+      judul5: "Manifestasi Klinis Pielonefritis",
+    },
+  },
 ];
 
 const styles = StyleSheet.create({
@@ -50,7 +68,8 @@ const styles = StyleSheet.create({
   },
   contentWrapper: {
     backgroundColor: "#547d2e",
-    padding: 10,
+    paddingBottom: 60,
+    paddingHorizontal: 10,
     height: Dimensions.get("window").height,
   },
   subJudul: {
@@ -480,6 +499,339 @@ function ManifestastiHidronefrosis() {
   );
 }
 
+function DefinisiBatuGinjal() {
+  return (
+    <View style={styles.contentWrapper}>
+      <ScrollView>
+        <Text style={styles.title}>Definisi</Text>
+        <Text style={styles.materi}>
+          Batu ginjal atau nefrolitiasis merupakan suatu keadaan dimana terdapat
+          satu atau lebih batu di dalam pelvis atau kaliks dari ginjal. Secara
+          garis besar pembentukan batu ginjal dipengaruhi oleh faktor intrinsik
+          dan ekstrinsik. Faktor intrinsik yaitu umur, jenis kelamin, dan
+          keturunan sedangkan faktor ekstrinsik yaitu kondisi geografis, iklim,
+          kebiasaan makan, zat yang terkandung dalam urin, pekerjaan, dan
+          sebagainya (Mochammad, 2014). Komposisi utama dari batu ginjal adalah
+          kalsium okslat yang mencapai 80% (Worcester et al., 2008).
+          Nefrolitiasis berdasarkan komposisinya terbagi menjadi batu kalsium,
+          batu struvit, batu asam urat, batu sistin, batu xantin, batu
+          triamteren, dan batu silikat. Pembentukan batu ginjal umumnya
+          membutuhkan keadaan supesaturasi. Namun pada urin normal, ditemukan
+          adanya zat inhibitor pembentuk batu. Pada kondisi-kondisi tertentu,
+          terdapat zat reaktan yang dapat menginduksi pembentukan batu. Adanya
+          hambatan aliran urin, kelainan bawaan pada pelvikalises, hiperplasia
+          prostat benigna, striktura, dan buli buluneurogenik ikut berperan
+          dalam proses pembentukan batu (Mochammad, 2014).
+        </Text>
+      </ScrollView>
+    </View>
+  );
+}
+
+function EtiologiBatuGinjal() {
+  return (
+    <View style={styles.contentWrapper}>
+      <ScrollView>
+        <Text style={styles.title}>Etiologi</Text>
+        <Text style={styles.materi}>
+          Ada beberapa penyebab terbentuknya batu ginjal yaitu hiperkalsiuria,
+          hiperurikosuria, hipositraturia, dan hiperoksaluria (Sakhaee et al.,
+          2012). Hal tersebut dapat dipicu oleh berbagai macam faktor seperti
+          faktor keturunan, makanan, dan obat-obatan.
+        </Text>
+        <Text style={styles.materi}>
+          1) Hiperkalsiuria: merupakan penyebab pembentukan batu kalsium.
+          Hiperkalsiuria disebabkan peningkatan penyerapan kalsium usus,
+          menurunnya reabsorbsi kalsium di ginjal dan peningkatan mobilisasi
+          kalsium dari tulang. Hiperkalsiuria juga merupakan gangguan heterogen
+          pada hiperabsorbsi kalsium usus dependen atau independen dari
+          1,25-dihydroxyvitamin D [1,25(𝑂𝐻)2𝐷]. Peningkatan konsentrasi serum
+          1,25(OH)2D-dependent mengakibatkan terbentuknya batu ginjal akibat
+          hiperkalsiuria (Sakhaee et al., 2012).
+        </Text>
+        <Text style={styles.materi}>
+          2) Hiperurikosuria terdeteksi dari 10% pembentuk batu kalsium.
+          Berdasarkan fisikokimia batu kalsium terbentuk akibat supersaturasi
+          kemih dengan monosodium koloid kristalisasi kalsium oksalat yang
+          diinduksi oleh urat (Sakhaee et al., 2012).
+        </Text>
+        <Text style={styles.materi}>
+          3) Hipositraturia: Sitrat merupakan inhibitor endogen pembentukan batu
+          kalsium. Rendahnya ekskresi sitrat urin ditemukan pada 20-60%
+          nefrolitiasis. Penentu utama ekskresi sitrat urin adalah keseimbangan
+          asam basa. Hipositraturia umumnya terjadi dengan asidosis metabolik.
+          Peran penghambatan sitrat juga melibatkan pembentukan larutan kompleks
+          dan pengurangan kejenuhan (Sakhaee et al., 2012).
+        </Text>
+        <Text style={styles.materi}>
+          4) Hiperoksaluria: Oksalat dan kalsium dapat meningkatkan
+          supersaturasi kalsium oksalat pada kemih. Hiperoksaluria merupakan
+          10-50% pembentuk batu kalsium. Hiperoksaluria disebabkan oleh produksi
+          oksalat yang berlebih akibat dari gangguan metabolisme, peningkatan
+          penyerapan oksalat usus, peningkatan asupan makanan dan
+          bioavailabilitas, dan urin pH. Urin yang sangat asam (pH 5,5) dan urin
+          yang sangat basa (pH 6,7) dapat mempengaruhi pembentukan batu kalsium.
+          Dengan pH yang terlalu asam maka urin menjadi jenuh dengan asam urat
+          yang berperan dalam kristalisasi kalsium oksalat. Sedangkan urin yang
+          sangat alkalin dapat meningkatkan monohidrogen fosfat yang dalam
+          kombinasi dengan kalsium berubah menjadi termodinamika brusit yang
+          tidak stabil dan akhirnya terbentuk hidroksiapatit (Sakhaee et al.,
+          2012).
+        </Text>
+      </ScrollView>
+    </View>
+  );
+}
+
+function JenisBatuGinjal() {
+  return (
+    <View style={styles.contentWrapper}>
+      <ScrollView>
+        <Text style={styles.title}>Jenis - Jenis</Text>
+        <Text style={styles.materi}>
+          Batu ginjal mempunyai banyak jenis dengan kandungan yang berbeda-beda,
+          berdasarkan komposisinya batu ginjal dibedakan sebagai berikut :
+        </Text>
+        <Text style={styles.materi}>
+          1) Batu kalsium terdiri dari batu kalsium oksalat dan kalsium fosfat.
+          Batu kalsium merupakan jenis batu ginjal yang paling umum. Batu
+          kalsium oksalat disebabkan oleh terlalu banyak oksalat dalam urin atau
+          disebut hiperkalsiuria. Oksalat adalah zat alami yang ditemukan dalam
+          banyak makanan. Tubuh menggunakan makanan untuk energi. Setelah tubuh
+          menggunakan apa yang dibutuhkannya, produk-produk limbah keluar
+          melalui aliran darah ke ginjal dan dibuang melalui urin. Urin memiliki
+          berbagai limbah di dalamnya. Jika terlalu banyak limbah dalam cairan
+          yang terlalu sedikit, kristal dapat mulai terbentuk. Kristal-kristal
+          ini dapat saling menempel ke kalsium ketika urin diproduksi oleh
+          ginjal dan membentuk massa padat yaitu batu ginjal (A to Z Health
+          Guide, 2017).
+        </Text>
+        <Text style={styles.materi}>
+          2) Batu asam urat tidak berkaitan dengan hiperurokosuria tetapi karena
+          penurunan kelarutan asam urat karena pH urin yang rendah. Batu asam
+          urat merupakan sindrom metabolik akibat urin bersifat asam yang terus
+          menerus. Kelarutan asam urat tidak terdisosiasi hanya 90 mg/L, dan
+          pada pH dibawah pKa 5,35 lebih dari setengah asam urat yang ada akan
+          berada dalam bentuk yang tidak berdisosiasi, sehingga ekskresi asam
+          urat harian normal sebanyak 500 mg tidak dapat disimpan dalam larutan
+          dengan volume urin dibawah 3 L (Worcester et al., 2008).
+        </Text>
+        <Text style={styles.materi}>
+          3) Batu struvit merupakan campuran magnesium, amonium fosfat dan
+          apatit karbonat yang terbentuk ketika saluran kemih terinfeksi
+          mikroorganisme yang memiliki enzim urease seperti golongan proteus,
+          providencia, klebsiella, pseudomnas dan enterococci. Urease
+          menghidrolisis menjadi amonia dan CO2 lalu meningkatkan pH urin dan
+          mengarah pada pembentukan karbonat. Kalsium karbonat mengendap dengan
+          struvit, membentuk batu bercabang besar didalam sistem pengumpulan
+          yang melekat pada bakteri. Antibiotik tidak efektif dalam memberantas
+          infeksi ketika bahan batu ada dan selama ada infeksi, batu akan terus
+          berkembang (Worcester et al., 2008).
+        </Text>
+        <Text style={styles.materi}>
+          4) Batu sistin ditemukan pada pasien dengan kelainan bawaan pada
+          transportasi asam amino pada ginjal dan usus yang menyebabkan
+          peningkatan ekskresi lisin, ornithin, sistin dan arginin karena
+          gangguan reabsorbsi di nefron. Batu terbentuk karena terbatasnya
+          kelarutan sistin. Kelarutan sistin lebih tinggi dalam urin alkali,
+          berkisar 175-360 mg/L di urin pada pH lebih dari 7,0. Tujuan menjaga
+          konsentrasi sistin sibawah 240 mg/L pada pH urin 7,0 untuk menjaga
+          kelarutan. Asupan cairan yang tinggi diberikan berdasarkan ekskresi
+          sistin harian yang dikeahui (Worcester et al., 2008)
+        </Text>
+      </ScrollView>
+    </View>
+  );
+}
+
+function DefinisiPielonefritis() {
+  return (
+    <View style={styles.contentWrapper}>
+      <Text style={styles.title}>Definisi</Text>
+      <Text style={styles.materi}>
+        Pielonefritis merupakan infeksi bakteri yang menyerang ginjal, yang
+        sifatnya akut maupun kronis. Pielonefritis akut biasanya akan
+        berlangsung selama 1 sampai 2 minggu. Bila pengobatan pada pielonefritis
+        akut tidak sukses maka dapat menimbulkan gejala lanjut yang disebut
+        dengan pielonefritis kronis. Pielonefritis meurpakan infeksi bakteri
+        pada piala ginjal,tumulus dan jaringan interstinal dari salah satu atau
+        kedua ginjal.
+      </Text>
+    </View>
+  );
+}
+
+function PielonefritisAkut() {
+  return (
+    <View style={styles.contentWrapper}>
+      <Text style={styles.title}>Pielonefritis Akut</Text>
+      <Text style={styles.materi}>
+        Pielonefritis akut biasanya singkat dan sering terjadi infeksi berulang
+        karena terapi tidak sempurna atau infeksi baru. Dimana 20% dari infeksi
+        yang berulang terjadi dua minggu setelah terapi selesai. Infeksi bakteri
+        dari saluran kemih bagian bawah kea rah ginjal, hal ini akan
+        mempengaruhi fungsi ginjal. Infeksi saluran urinarius atas dikaitkan
+        dengan selimut antibiotic bakteri dalam urin. Ginjal biasanya membesar
+        disertai infiltrasi interstisial sel-sel inflamasi. Abses dapat dijumpai
+        pada kapsul ginjal dan pada taut kortikomedularis. Pada akhirnya, atrofi
+        dan kerusakan tubulus serta glomerulus terjadi (indra,2011).
+      </Text>
+    </View>
+  );
+}
+
+function PielonefritisKronis() {
+  return (
+    <View style={styles.contentWrapper}>
+      <Text style={styles.title}>Pielonefritis Kronis</Text>
+      <Text style={styles.materi}>
+        Pielonefritis kronis juga berasal dari adanya bakteri, tetapi dapat juga
+        karena faktor lain seperti obstruksi saluran kemih dana refluk urin.
+        Pielonefritis kronis dapat merusak jaringan ginjal secara permanen
+        akibat inflamasi yang berulang kali dan timbulnya parut dan dapat
+        menyebabkan terjadinya renal failure (gagal ginjal) yang kronis. Ginjal
+        pun membentuk jaringan parut progresif, berkontraksi dan tidak
+        berfungsi. Proses perkembangan kegagalan ginjal kronis dari infeksi
+        ginjal yang berulang-ulang berlangsung beberapa tahun atau setelah
+        infeksi yang gawat.
+      </Text>
+    </View>
+  );
+}
+
+function EtiologiPielonefritis() {
+  return (
+    <View style={styles.contentWrapper}>
+      <Text style={styles.title}>Etiologi</Text>
+      <Text style={styles.materi}>
+        Escherichia coli (bakteri yang dalam keadaan normal ditemukan di usus
+        besar) merupakan penyebab dari 90% infeksi ginjal diluar rumah sakit dan
+        penyebab dari 50% infeksi ginjal di rumah sakit. Selain E.coli bakteri
+        lain yang juga turut dapat mengakibatkan pielonefritis seperti
+        klebsiella, golongan streptokokus. Infeksi biasanya berasal dari daerah
+        kelamin yang naik ke kandung kemih. Pada salurah kemih yang sehat,
+        naiknya infeksi ini biasanya bisa dicegah oleh aliran air kemih yang
+        akan membersihkan organism oleh penutupan ureter di tempat masuknya ke
+        kandung kemih. Berbagai penyumbatan fisik pada aliran air kemih
+        (misalnya batu ginjal atau pembesaran prostat) atau arus balik air kemih
+        dari kandung kemih ke dalam ureter, akan meningkatkan kemungkinan
+        terjadinya infeksi ginjal. Infeksi juga bisa dibawa ke ginjal dari
+        bagian tubuh lainnya melalui aliran darah. keadaan lainnya yang
+        meningkatkan risiko terjadinya ginjal adalah :
+      </Text>
+      <Text style={styles.materi}>1) Kehamilan</Text>
+      <Text style={styles.materi}>2) Kencing Manis</Text>
+      <Text style={styles.materi}>
+        3) Keadaan-keadaan yang menyebabkan menurunnya sistem kekebalan tubuh
+        untuk melawan infeksi
+      </Text>
+    </View>
+  );
+}
+
+function ManifestasiPielonefritis() {
+  return (
+    <View style={styles.contentWrapper}>
+      <ScrollView>
+        <Text style={styles.title}>Manifestasi Klinis</Text>
+        <Text style={styles.materi}>
+          Gejala pada pasien dengan pielonefritis biasanya timbul secara
+          tiba-tiba berupa demam, menggigil, nyeri di punggung bagian bawah,
+          mual dan muntah. Selain itu, beberapa penderita menunjukkan gejala
+          infeksi saluran kemih bagian bawah biasanya sering berkemih dan nyeri
+          ketika berkemih. Biasanya terjadi pembesaran salah satu atau kedua
+          ginjal. Kadang otot perut berkontraksi kuat. Bisa terjadi kolik
+          renalis, dimana penderita merasakan nyeri hebat yang disebabkan oleh
+          kejang ureter. Kejang bisa terjadi karena adanya iritasi akibat
+          infeksi atau karena lewatnya batu ginjal. Pada anak-anak, gejala
+          infeksi ginjal seringkali sangat ringan dan lebih sulit untuk
+          dikenali. Pada infeksi menahun (pielonefritis kronis), nyerinya
+          bersifat samar dan demam hilang timbul atau tidak ditemukan demam sama
+          sekali. Pielonefritis kronis hanya terjadi pada penderita yang
+          memiliki kelainan utama, seperti penyumbatan saluran kemih, batu
+          ginjal yang besar atau arus balik air kemih dari kandung kemih ke
+          dalam ureter (pada anak kecil). Pielonefritis kronis pada akhirnya
+          bisa merusak ginjal sehingga ginjal tidak dapat berfungsi sebagaimana
+          mestinya (gagal ginjal). Berikut tanda dan gejala pielonefritis akut
+          dan kronis
+        </Text>
+        <Text style={styles.materi}>1) Pielonefritis akut</Text>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>a) Demam</Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>b) Menggigil</Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>c) Nyeri panggul</Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>
+            d) Nyeri tekan pada sudut kostovetebral (CVA)
+          </Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>e) Lekositosis</Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>
+            f) Adanya bakteri dan sel darah putih pada urin
+          </Text>
+          <Text style={styles.materi}>g) Disuria</Text>
+          <Text style={styles.materi}>
+            h) Biasanya terjadi pembesaran ginjal disertai infiltrasi
+            interstisial sel-sel inflamasi
+          </Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>g) Disuria</Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>
+            h) Biasanya terjadi pembesaran ginjal disertai infiltrasi
+            interstisial sel-sel inflamasi
+          </Text>
+        </View>
+        <Text style={styles.materi}>2) Pielonefritis kronis</Text>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>
+            a) Tanpa gejala infeksi, kecuali terjadi eksaserbasi
+          </Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>b) Keletihan</Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>c) Sakit kepala</Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>d) Nafsu makan rendah</Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>e) Poliuria</Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>f) Haus yang berlebihan</Text>
+          <Text style={styles.materi}>g) Kehilangan berat badan</Text>
+          <Text style={styles.materi}>
+            h) Infeksi yang menetap menyebabkan jaringan parut di ginjal,
+            disertai gagal ginjal pada akhirnya.
+          </Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>g) Disuria</Text>
+        </View>
+        <View style={styles.subList}>
+          <Text style={styles.materi}>
+            h) Biasanya terjadi pembesaran ginjal disertai infiltrasi
+            interstisial sel-sel inflamasi
+          </Text>
+        </View>
+      </ScrollView>
+    </View>
+  );
+}
+
 function DetailsScreen({ route, navigation }) {
   const { itemId } = route.params;
   if (itemId === DATA[0].id) {
@@ -554,6 +906,66 @@ function DetailsScreen({ route, navigation }) {
           style={styles.subListButton}
         >
           <Text style={styles.buttonText}>{DATA[2].subJudul.judul3}</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  } else if (itemId === DATA[3].id) {
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Definisi Batu Ginjal")}
+          style={styles.subListButton}
+        >
+          <Text style={styles.buttonText}>{DATA[3].subJudul.judul1}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Etiologi Batu Ginjal")}
+          style={styles.subListButton}
+        >
+          <Text style={styles.buttonText}>{DATA[3].subJudul.judul2}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Jenis - Jenis Batu Ginjal")}
+          style={styles.subListButton}
+        >
+          <Text style={styles.buttonText}>{DATA[3].subJudul.judul3}</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  } else if (itemId === DATA[4].id) {
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Definisi Pielonefritis")}
+          style={styles.subListButton}
+        >
+          <Text style={styles.buttonText}>{DATA[4].subJudul.judul1}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Pielonefritis Akut")}
+          style={styles.subListButton}
+        >
+          <Text style={styles.buttonText}>{DATA[4].subJudul.judul2}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Pielonefritis Kronis")}
+          style={styles.subListButton}
+        >
+          <Text style={styles.buttonText}>{DATA[4].subJudul.judul3}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Etiologi Pielonefritis")}
+          style={styles.subListButton}
+        >
+          <Text style={styles.buttonText}>{DATA[4].subJudul.judul4}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate("Manifestasi Klinis Pielonefritis")
+          }
+          style={styles.subListButton}
+        >
+          <Text style={styles.buttonText}>{DATA[4].subJudul.judul5}</Text>
         </TouchableOpacity>
       </View>
     );
@@ -640,6 +1052,41 @@ export default function App() {
         <Stack.Screen
           name="Manifestasi Klinis Hidronefrosis"
           component={ManifestastiHidronefrosis}
+        />
+
+        <Stack.Screen
+          name="Definisi Batu Ginjal"
+          component={DefinisiBatuGinjal}
+        />
+        <Stack.Screen
+          name="Etiologi Batu Ginjal"
+          component={EtiologiBatuGinjal}
+        />
+        <Stack.Screen
+          name="Jenis - Jenis Batu Ginjal"
+          component={JenisBatuGinjal}
+        />
+
+        <Stack.Screen
+          name="Definisi Pielonefritis"
+          component={DefinisiPielonefritis}
+        />
+
+        <Stack.Screen name="Pielonefritis Akut" component={PielonefritisAkut} />
+
+        <Stack.Screen
+          name="Pielonefritis Kronis"
+          component={PielonefritisKronis}
+        />
+
+        <Stack.Screen
+          name="Etiologi Pielonefritis"
+          component={EtiologiPielonefritis}
+        />
+
+        <Stack.Screen
+          name="Manifestasi Klinis Pielonefritis"
+          component={ManifestasiPielonefritis}
         />
       </Stack.Navigator>
     </NavigationContainer>
