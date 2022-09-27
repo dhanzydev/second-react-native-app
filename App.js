@@ -26,6 +26,11 @@ const DATA = [
   },
   {
     id: "2",
+    subJudul: {
+      judul1: "Definisi",
+      judul2: "Etiologi",
+      judul3: "Manifestasi Klinis",
+    },
   },
 ];
 
@@ -48,6 +53,7 @@ const styles = StyleSheet.create({
   materi: {
     color: "#fff",
     fontSize: 15,
+    marginBottom: 10,
   },
   wrapperList: {
     flex: 1,
@@ -177,36 +183,43 @@ function DefinisiSindromNefrotik() {
 function EtiologiSindromNefrotik() {
   return (
     <View style={styles.contentWrapper}>
-      <Text style={styles.title}>Etiologi</Text>
-      <Text style={styles.materi}>1). Kongenital</Text>
-      <Text style={styles.materi}>
-        Penyebab dari sindrom nefrotik kongenital atau genetik adalah11 : -
-        Finnish-type congenital nephrotic syndrome (NPHS1, nephrin) -
-        Denys-Drash syndrome (WT1) - Frasier syndrome (WT1) - Diffuse mesangial
-        sclerosis (WT1, PLCE1) - Autosomal recessive, familial FSGS (NPHS2,
-        podocin) - Autosomal dominant, familial FSGS (ACTN4, α-actinin-4; TRPC6)
-        - Nail-patella syndrome (LMX1B) - Pierson syndrome (LAMB2) - Schimke
-        immuno-osseous dysplasia (SMARCAL1) 8 - Galloway-Mowat syndrome -
-        Oculocerebrorenal (Lowe) syndrome
-      </Text>
-      <Text style={{ marginTop: 20, color: "#fff" }}>2). Primer</Text>
-      <Text style={styles.materi}>
-        Berdasarkan gambaran patologi anatomi, sindrom nefrotik primer atau
-        idiopatik adalah sebagai berikut : - Sindrom Nefrotik Kelainan Minimal
-        (SNKM) - Glomerulosklerosis fokal segmental (GSFS) - Mesangial
-        Proliferative Difuse (MPD) - Glomerulonefritis Membranoproliferatif
-        (GNMP) - Nefropati Membranosa (GNM)
-      </Text>
-      <Text style={{ marginTop: 20, color: "#fff" }}>3). Sekunder</Text>
-      <Text style={styles.materi}>
-        Sindrom nefrotik sekunder mengikuti penyakit sistemik, antara lain
-        sebagai berikut : - lupus erimatosus sistemik (LES) - keganasan, seperti
-        limfoma dan leukemia - vaskulitis, seperti granulomatosis Wegener
-        (granulomatosis dengan poliangitis), sindrom Churg-Strauss
-        (granulomatosis eosinofilik dengan poliangitis), poliartritis nodosa,
-        poliangitis mikroskopik, purpura Henoch Schonlein - Immune complex
-        mediated, seperti post streptococcal (postinfectious) glomerulonephritis
-      </Text>
+      <ScrollView>
+        <Text style={styles.title}>Etiologi</Text>
+        <Text style={styles.materi}>1). Kongenital</Text>
+        <Text style={styles.materi}>
+          Penyebab dari sindrom nefrotik kongenital atau genetik adalah11 : -
+          Finnish-type congenital nephrotic syndrome (NPHS1, nephrin) -
+          Denys-Drash syndrome (WT1) - Frasier syndrome (WT1) - Diffuse
+          mesangial sclerosis (WT1, PLCE1) - Autosomal recessive, familial FSGS
+          (NPHS2, podocin) - Autosomal dominant, familial FSGS (ACTN4,
+          α-actinin-4; TRPC6) - Nail-patella syndrome (LMX1B) - Pierson syndrome
+          (LAMB2) - Schimke immuno-osseous dysplasia (SMARCAL1) 8 -
+          Galloway-Mowat syndrome - Oculocerebrorenal (Lowe) syndrome
+        </Text>
+        <Text style={{ marginTop: 20, color: "#fff", fontSize: 15 }}>
+          2). Primer
+        </Text>
+        <Text style={styles.materi}>
+          Berdasarkan gambaran patologi anatomi, sindrom nefrotik primer atau
+          idiopatik adalah sebagai berikut : - Sindrom Nefrotik Kelainan Minimal
+          (SNKM) - Glomerulosklerosis fokal segmental (GSFS) - Mesangial
+          Proliferative Difuse (MPD) - Glomerulonefritis Membranoproliferatif
+          (GNMP) - Nefropati Membranosa (GNM)
+        </Text>
+        <Text style={{ marginTop: 20, color: "#fff", fontSize: 15 }}>
+          3). Sekunder
+        </Text>
+        <Text style={styles.materi}>
+          Sindrom nefrotik sekunder mengikuti penyakit sistemik, antara lain
+          sebagai berikut : - lupus erimatosus sistemik (LES) - keganasan,
+          seperti limfoma dan leukemia - vaskulitis, seperti granulomatosis
+          Wegener (granulomatosis dengan poliangitis), sindrom Churg-Strauss
+          (granulomatosis eosinofilik dengan poliangitis), poliartritis nodosa,
+          poliangitis mikroskopik, purpura Henoch Schonlein - Immune complex
+          mediated, seperti post streptococcal (postinfectious)
+          glomerulonephritis
+        </Text>
+      </ScrollView>
     </View>
   );
 }
@@ -214,39 +227,133 @@ function EtiologiSindromNefrotik() {
 function ManifestastiKlinisSindromNefrotik() {
   return (
     <View style={styles.contentWrapper}>
-      <Text style={styles.title}>Manifestasi Klinis</Text>
-      <Text style={styles.materi}>1). Proteinuria </Text>
+      <ScrollView>
+        <Text style={styles.title}>Manifestasi Klinis</Text>
+        <Text style={{ color: "#fff", fontSize: 15 }}>1). Proteinuria </Text>
+        <Text style={styles.materi}>
+          Protenuria merupakan kelainan utama pada sindrom nefrotik. Apabila
+          ekskresi protein ≥ 40 mg/jam/m2 luas permukaan badan disebut dengan
+          protenuria berat. Hal ini digunakan untuk membedakan dengan protenuria
+          pada pasien bukan sindrom nefrotik.
+        </Text>
+        <Text style={{ marginTop: 20, color: "#fff", fontSize: 15 }}>
+          2). Hipoalbuminemia{" "}
+        </Text>
+        <Text style={styles.materi}>
+          Salah satu manifestasi pada pasien sindrom nefrotik pada anak terjadi
+          hipoalbuminemia apabila kadar albumin kurang dari 2,5 g/dL.
+        </Text>
+        <Text style={{ marginTop: 20, color: "#fff", fontSize: 15 }}>
+          3). Edema{" "}
+        </Text>
+        <Text style={styles.materi}>
+          Terdapat beberapa teori yang menjelaskan tentang timbulnya edema pada
+          sindrom nefrotik. Underfilled theory merupakan teori klasik tentang
+          pembentukan edema. Teori ini berisi bahwa adanya edema disebabkan oleh
+          menurunnya tekanan onkotik intravaskuler dan menyebabkan cairan
+          merembes ke ruang interstisial.
+        </Text>
+        <Text style={{ marginTop: 20, color: "#fff", fontSize: 15 }}>
+          4). Hiperkolesterolemia
+        </Text>
+        <Text style={styles.materi}>
+          Hampir semua kadar lemak (kolesterol, trigliserid) dan lipoprotein
+          serum meningkat pada sindrom nefrosis. Hal ini dapat dijelaskan dengan
+          penjelasan antara lain yaitu adanya kondisi hipoproteinemia yang
+          merangsang sintesis protein menyeluruh dalam hati, termasuk
+          lipoprotein. Selain itu katabolisme lemak menurun karena terdapat
+          penurunan kadar lipoprotein lipase plasma, sistem enzim utama yang
+          mengambil lemak dari plasma
+        </Text>
+      </ScrollView>
+    </View>
+  );
+}
+
+function DefinisiGlomerulonefritis() {
+  return (
+    <View style={styles.contentWrapper}>
+      <Text style={styles.title}>Definisi</Text>
       <Text style={styles.materi}>
-        Protenuria merupakan kelainan utama pada sindrom nefrotik. Apabila
-        ekskresi protein ≥ 40 mg/jam/m2 luas permukaan badan disebut dengan
-        protenuria berat. Hal ini digunakan untuk membedakan dengan protenuria
-        pada pasien bukan sindrom nefrotik.
+        Glomerulo Nefritis adalah gangguan pada ginjal yang ditandai dengan
+        peradangan pada kapiler glomerulus yang fungsinya sebagai filtrasi
+        cairan tubuh dan sisa-sisa pembuangan (Suriadi, dkk, 2001). Menurut
+        Ngastiyah (2005) GNA adalah suatu reaksi imunologis ginjal terhadap
+        bakteri / virus tertentu.GNA adalah istilah yang secara luas digunakan
+        yang mengacu pada sekelompok penyakit ginjal dimana inflamasi terjadi di
+        glomerulus (Brunner & Suddarth, 2001)
       </Text>
-      <Text style={{ marginTop: 20, color: "#fff" }}>2). Hipoalbuminemia </Text>
+    </View>
+  );
+}
+
+function EtiologiGlomerulonefritis() {
+  return (
+    <View style={styles.contentWrapper}>
+      <Text style={styles.title}>Etiologi</Text>
       <Text style={styles.materi}>
-        Salah satu manifestasi pada pasien sindrom nefrotik pada anak terjadi
-        hipoalbuminemia apabila kadar albumin kurang dari 2,5 g/dL.
+        Penyebab GNA adalah bakteri, virus, dan proses imunologis lainnya,
+        tetapi pada anak penyebab paling sering adalah pasca infeksi
+        streptococcus β haemolyticus; sehingga seringkali di dalam pembicaraan
+        GNA pada anak yang dimaksud adalah GNA pasca streptokokus (Noer, 2002).
+        Glomerulonefritis akut paska streptokokus menyerang anak umur 5 – 15
+        tahun, anak laki – laki berpeluang menderita 2 kali lebih sering
+        dibanding anak perempuan, timbul setelah 9 – 11 hari awitan infeksi
+        streptokokus (Nelson, 2002).
       </Text>
-      <Text style={{ marginTop: 20, color: "#fff" }}>3). Edema </Text>
-      <Text style={styles.materi}>
-        Terdapat beberapa teori yang menjelaskan tentang timbulnya edema pada
-        sindrom nefrotik. Underfilled theory merupakan teori klasik tentang
-        pembentukan edema. Teori ini berisi bahwa adanya edema disebabkan oleh
-        menurunnya tekanan onkotik intravaskuler dan menyebabkan cairan merembes
-        ke ruang interstisial.
-      </Text>
-      <Text style={{ marginTop: 20, color: "#fff" }}>
-        4). Hiperkolesterolemia
-      </Text>
-      <Text style={styles.materi}>
-        Hampir semua kadar lemak (kolesterol, trigliserid) dan lipoprotein serum
-        meningkat pada sindrom nefrosis. Hal ini dapat dijelaskan dengan
-        penjelasan antara lain yaitu adanya kondisi hipoproteinemia yang
-        merangsang sintesis protein menyeluruh dalam hati, termasuk lipoprotein.
-        Selain itu katabolisme lemak menurun karena terdapat penurunan kadar
-        lipoprotein lipase plasma, sistem enzim utama yang mengambil lemak dari
-        plasma
-      </Text>
+    </View>
+  );
+}
+
+function ManifestastiGlomerulonefritis() {
+  return (
+    <View style={styles.contentWrapper}>
+      <ScrollView>
+        <Text style={styles.title}>Manifestasi Klinis</Text>
+        <Text style={styles.materi}>
+          Kasus klasik atau tipikal diawali dengan infeksi saluran napas atas
+          dengan nyeri tenggorok dua minggu mendahului timbulnya sembab (Travis,
+          1994).Periode laten rata-rata 10 atau 21 hari setelah infeksi
+          tenggorok atau kulit (Nelson, 2000).
+        </Text>
+        <Text>{"\n"}</Text>
+        <Text style={styles.materi}>
+          1) Hematuria (urine berwarna merah kecoklat-coklatan)
+        </Text>
+        <Text style={styles.materi}>2) Proteinuria (protein dalam urine)</Text>
+        <Text style={styles.materi}>
+          3) Oliguria (keluaran urine berkurang)
+        </Text>
+        <Text style={styles.materi}>4) Nyeri panggul</Text>
+        <Text style={styles.materi}>
+          5) Edema, ini cenderung lebih nyata pada wajah dipagi hari, kemudian
+          menyebar ke abdomen dan ekstremitas di siang hari (edema sedang
+          mungkin tidak terlihat oleh seorang yang tidak mengenal anak dengan
+          baik).
+        </Text>
+        <Text style={styles.materi}>
+          6) Suhu badan umumnya tidak seberapa tinggi, tetapi dapat terjadi
+          tinggi sekali pada hari pertama
+        </Text>
+        <Text style={styles.materi}>
+          7) Hipertensi terdapat pada 60-70 % anak dengan GNA pada hari pertama
+          dan akan kembali normal pada akhir minggu pertama juga. Namun jika
+          terdapat kerusakan jaringan ginjal, tekanan darah akan tetap tinggi
+          selama beberapa minggu dan menjadi permanen jika keadaan penyakitnya
+          menjadi kronik (Sekarwana, 2001).
+        </Text>
+        <Text style={styles.materi}>
+          8) Dapat timbul gejala gastrointestinal seperti muntah, tidak nafsu
+          makan, dan diare.
+        </Text>
+        <Text style={styles.materi}>
+          9) Bila terdapat ensefalopati hipertensif dapat timbul sakit kepala,
+          kejang dan kesadaran menurun.
+        </Text>
+        <Text style={styles.materi}>
+          10) Fatigue (keletihan atau kelelahan)
+        </Text>
+      </ScrollView>
     </View>
   );
 }
@@ -275,6 +382,31 @@ function DetailsScreen({ route, navigation }) {
           style={styles.subListButton}
         >
           <Text style={styles.buttonText}>{DATA[0].subJudul.judul3}</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  } else if (itemId === DATA[1].id) {
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Definisi Glomerulonefritis")}
+          style={styles.subListButton}
+        >
+          <Text style={styles.buttonText}>{DATA[1].subJudul.judul1}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Etiologi Glomerulonefritis")}
+          style={styles.subListButton}
+        >
+          <Text style={styles.buttonText}>{DATA[1].subJudul.judul2}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate("Manifestasi Klinis Glomerulonefritis")
+          }
+          style={styles.subListButton}
+        >
+          <Text style={styles.buttonText}>{DATA[1].subJudul.judul3}</Text>
         </TouchableOpacity>
       </View>
     );
@@ -335,6 +467,19 @@ export default function App() {
         <Stack.Screen
           name="Manifestasi Klinis Sindrom Nefrotik"
           component={ManifestastiKlinisSindromNefrotik}
+        />
+
+        <Stack.Screen
+          name="Definisi Glomerulonefritis"
+          component={DefinisiGlomerulonefritis}
+        />
+        <Stack.Screen
+          name="Etiologi Glomerulonefritis"
+          component={EtiologiGlomerulonefritis}
+        />
+        <Stack.Screen
+          name="Manifestasi Klinis Glomerulonefritis"
+          component={ManifestastiGlomerulonefritis}
         />
       </Stack.Navigator>
     </NavigationContainer>
