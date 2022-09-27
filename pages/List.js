@@ -14,12 +14,12 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const DATA = [
   {
     id: "1",
-    title: "Gonore",
+    title: "Sindrom Nefrotik",
   },
-  { id: "2", title: "Sifilis" },
-  { id: "3", title: "Herpes Genitalia" },
-  { id: "4", title: "Trichomoniasis" },
-  { id: "5", title: "Uretritis Non Spesifik UNS" },
+  { id: "2", title: "Glomerulonefritis" },
+  { id: "3", title: "Hidronefrosis" },
+  { id: "4", title: "Batu Ginjal" },
+  { id: "5", title: "Pielonefritis" },
 ];
 
 const Item = ({ title, id }) => {
@@ -46,39 +46,12 @@ const renderItem = ({ item }) => (
   <Item title={item.title} materi={item.materi} id={item.id} />
 );
 export default class List extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: false,
-      data: DATA,
-      error: null,
-      searchValue: "",
-    };
-    this.arrayholder = DATA;
-  }
-  searchFunction = (text) => {
-    const updatedData = this.arrayholder.filter((item) => {
-      const item_data = `${item.title.toUpperCase()})`;
-      const text_data = text.toUpperCase();
-      return item_data.indexOf(text_data) > -1;
-    });
-    this.setState({ data: updatedData, searchValue: text });
-  };
   render() {
     return (
       <View style={styles.container}>
-        <SearchBar
-          placeholder="Search Here..."
-          lightTheme
-          round
-          value={this.state.searchValue}
-          onChangeText={(text) => this.searchFunction(text)}
-          autoCorrect={false}
-        />
-
         <FlatList
           nestedScrollEnabled
-          data={this.state.data}
+          data={DATA}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
           style={{ marginTop: 20 }}
@@ -90,10 +63,8 @@ export default class List extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 30,
     padding: 2,
     paddingBottom: 70,
-    backgroundColor: "#FCE2DB",
     height: Dimensions.get("window").height,
   },
   item: {
@@ -107,11 +78,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 1.41,
     elevation: 2,
-    marginBottom: 10,
-    backgroundColor: "#F675A8",
+    marginBottom: 15,
+    backgroundColor: "#547d2e",
   },
   textItem: {
-    padding: 15,
+    padding: 25,
     color: "#fff",
   },
   centeredView: {
